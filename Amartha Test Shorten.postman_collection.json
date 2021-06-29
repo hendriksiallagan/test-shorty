@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "30ba0b36-a9d6-40b8-8b61-453710ca319e",
+		"name": "Amartha Test Shorten",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Shorten",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"url\": \"https://blog.trello.com/navigate-communication-styles-difficult-times\",\n  \"shortcode\": \"tes123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7777/shorten",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"shorten"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Location By Shortencode",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7777/shortcode/tes123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"shortcode",
+						"tes123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Stats By Shortencode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7777/shortcode/stats/tes123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"shortcode",
+						"stats",
+						"tes123"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

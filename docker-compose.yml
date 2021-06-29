@@ -1,0 +1,12 @@
+version: '3.6'
+
+services:
+    amartha-shorten-service: 
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: amartha-shorten-service
+        image: amartha-shorten-service
+        ports: 
+          - "7777:7777"
+        restart: always
